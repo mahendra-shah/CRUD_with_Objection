@@ -41,7 +41,7 @@ class UserServices {
     }
 
     // Delete
-    async update(id){
+    async remove(id){
         try {
             const isData = await User.query().where({ id })
             if (isData.length == 0) {
