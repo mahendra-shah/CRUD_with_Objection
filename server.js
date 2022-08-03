@@ -59,7 +59,7 @@ app.put('/update/:id', valid, async (req, res) => {
 app.delete('/delete/:id', valid, async (req, res) => {
     const id = req.params.id
     try {
-        const result = await service.update(id)
+        const result = await service.remove(id)
         if (!result.error){
             return res.send(result)
         }
